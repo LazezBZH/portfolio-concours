@@ -1,0 +1,187 @@
+.contact-title {
+  margin: 0 0 1rem auto;
+  padding-left: 110px;
+  padding-right: 50px;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: min(6vw, 4rem, 80px);
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px var(--neongreen-xlight);
+
+  text-shadow: 1px 1px 2px var(--neongreen), 0 0 1em var(--neongreen-light),
+    0 0 0.2em whitesmoke;
+  position: relative;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.contact-title::before {
+  content: "le chat pitre aime les jeux de mots.";
+  width: 0%;
+  height: 10%;
+  background-color: var(--primary);
+  color: var(--primary);
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-60%, -50%);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-text-stroke: 2px var(--neongreen);
+}
+.contact-title:hover {
+  -webkit-text-stroke: 2px transparent;
+
+  text-shadow: 1px 1px 2px transparent, 0 0 1em transparent,
+    0 0 0.2em transparent;
+  color: transparent;
+}
+.contact-title:hover::before {
+  color: var(--primary);
+  -webkit-text-stroke: 2px var(--neongreen);
+  text-shadow: 1px 1px 2px var(--neongreen), 0 0 1em var(--neongreen-light),
+    0 0 0.2em whitesmoke;
+  width: 70%;
+  height: 100%;
+  margin-top: 2rem;
+  opacity: 1;
+  transition: width 20ms, opacity 00ms;
+  animation: change-text 1500ms 1;
+  z-index: 1;
+}
+@keyframes change-text {
+  0% {
+    content: "";
+  }
+  15% {
+    content: "le";
+  }
+  30% {
+    content: "le chat";
+  }
+  45% {
+    content: "le chat pitre";
+  }
+  56% {
+    content: "le chat pitre aime";
+  }
+  68% {
+    content: "le chat pitre aime les";
+  }
+  80% {
+    content: "le chat pitre aime les jeux ";
+  }
+  92% {
+    content: "le chat pitre aime les jeux de";
+  }
+  100% {
+    content: "le chat pitre aime les jeux de mots.";
+  }
+}
+
+.linktree {
+  /* height: 60vh; */
+  margin: auto;
+  width: 320px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: visible;
+}
+.linktree img {
+  width: 100%;
+  height: 120%;
+}
+.icons {
+  width: 100px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.icons-left {
+  justify-content: end;
+}
+.icons-right {
+  justify-content: start;
+}
+a {
+  text-decoration: none;
+}
+.facebook,
+.tiktok,
+.linkedin,
+.mail,
+.facebook img,
+.tiktok img,
+.linkedin img,
+.mail img {
+  cursor: url("/assets/svg/mouse-pink.svg"), pointer;
+  color: var(--neonblue);
+}
+.instagram,
+.youtube,
+.behance,
+.telephon,
+.instagram img,
+.youtube img,
+.behance img,
+.telephon img {
+  cursor: url("/assets/svg/mouse-blue.svg"), pointer;
+  color: var(--neonpink);
+}
+.facebook {
+  top: 45px;
+  left: 15px;
+}
+.instagram {
+  top: 120px;
+  left: 15px;
+}
+.tiktok {
+  top: 195px;
+  left: 15px;
+}
+.youtube {
+  top: 270px;
+  left: 15px;
+}
+.behance {
+  top: 80px;
+  left: 202px;
+}
+.linkedin {
+  top: 155px;
+  left: 202px;
+}
+.telephon {
+  top: 230px;
+  left: 202px;
+}
+.mail {
+  top: 305px;
+  left: 202px;
+}
+.icons img {
+  width: 30px;
+  top: 50%;
+}
+
+.contact-img {
+  position: absolute;
+  top: 0;
+  left: 160px;
+  transform: translate(-53%, -80%);
+}
+.contact-img {
+  height: 10px;
+}
+.linktree .contact-img {
+  height: 180px;
+}

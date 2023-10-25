@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap");
+:root {
+  --primary: black;
+  --neongreen: rgb(0, 255, 26);
+  --neongreen-light: rgba(0, 255, 26, 0.4);
+  --neongreen-xlight: rgba(0, 255, 26, 0.1);
+  --neonyellow: rgb(255, 240, 31);
+  --neonpink: rgb(255, 113, 206);
+  --neonblue: rgb(4, 217, 255);
+  --neonpurple: rgb(210, 143, 248);
+  --pie3: rgb(43, 43, 43);
+  --pie2: rgb(57, 57, 57);
+  --pie1: rgb(71, 71, 71);
+  --text: whitesmoke;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* overflow: hidden; */
+  cursor: url("/assets/svg/patte-green.svg"), default;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--text);
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.home-title {
+  margin: 0 0 1rem auto;
+  padding-left: 110px;
+  padding-right: 50px;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: min(6vw, 4rem, 80px);
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px var(--neongreen-xlight);
+
+  text-shadow: 1px 1px 2px var(--neongreen), 0 0 1em var(--neongreen-light),
+    0 0 0.2em whitesmoke;
+  position: relative;
+}
+
+.home-title::before {
+  content: "et oui, je suis le chat pitre!";
+  width: 0%;
+  height: 10%;
+  background-color: var(--primary);
+  color: var(--primary);
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-60%, -50%);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-text-stroke: 2px var(--neongreen);
+}
+.home-title:hover {
+  -webkit-text-stroke: 2px transparent;
+
+  text-shadow: 1px 1px 2px transparent, 0 0 1em transparent,
+    0 0 0.2em transparent;
+  color: transparent;
+}
+.home-title:hover::before {
+  color: var(--primary);
+  -webkit-text-stroke: 2px var(--neongreen);
+  text-shadow: 1px 1px 2px var(--neongreen), 0 0 1em var(--neongreen-light),
+    0 0 0.2em whitesmoke;
+  width: 70%;
+  height: 100%;
+  opacity: 1;
+  transition: width 20ms, opacity 00ms;
+  animation: change-text 1500ms 1;
+  z-index: 1;
+}
+
+@keyframes change-text {
+  0% {
+    content: "";
+  }
+  12% {
+    content: "et";
+  }
+  23% {
+    content: "et oui";
+  }
+  34% {
+    content: "et oui,";
+  }
+  45% {
+    content: "et oui, je";
+  }
+  56% {
+    content: "et oui, je suis";
+  }
+  67% {
+    content: "et oui, je suis le";
+  }
+  78% {
+    content: "et oui, je suis le chat";
+  }
+  89% {
+    content: "et oui, je suis le chat pitre";
+  }
+
+  100% {
+    content: "et oui, je suis le chat pitre!";
+  }
+}
+main {
+  margin: auto;
+  width: 90%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 38%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-image: url(assets/svg/cat.svg);
+  background-size: 35vh;
+  background-repeat: no-repeat;
+  background-position: right 50% bottom 85%;
+}
+main p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+main a {
+  color: var(--neonblue);
+  text-decoration: none;
+  cursor: url("/assets/svg/mouse-green.svg"), default;
+}
+
+.cards-container {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.cards {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  gap: 40px;
+  padding: 1rem;
+}
+.card {
+  width: 260px;
+  border: solid 5px var(--neongreen);
+  padding: 0.5rem;
+  border-radius: 0px 30px 120px 30px;
+  display: flex;
+  align-items: center;
+}
+.card:hover {
+  border: solid 5px var(--neonblue);
+  cursor: url("/assets/svg/patte-blue.svg"), default;
+}
+.day {
+  cursor: url("/assets/svg/patte-blue.svg"), default;
+  color: var(--neongreen);
+}
+.day:hover {
+  color: var(--neonblue);
+}
+
+/* bg image */
+.bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -10%;
+  overflow: hidden;
+  background-color: var(--primary);
+  z-index: -1;
+  min-height: 100vh;
+}
+.bg {
+  content: "";
+  position: absolute;
+  background: url(assets/svg/catandmouse.svg);
+  background-repeat: no-repeat;
+  background-position: right 100% bottom 0%;
+  background-size: 10%;
+  top: 0%;
+  left: -10vw;
+  right: 0;
+  height: 100vh;
+  -webkit-transform: translate(0, -3vh);
+  transform: translate(0, -3vh);
+  -webkit-animation: run 10s linear infinite;
+  animation: run 10s linear infinite;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  transition-timing-function: ease-in;
+}
+@-webkit-keyframes run {
+  0% {
+    -webkit-transform: translate(-10vw, -3vh);
+    transform: translate(-10vw, -3vh);
+  }
+
+  100% {
+    -webkit-transform: translate(110vw -3vh);
+    transform: translate(110vw, -3vh);
+  }
+}
+
+@keyframes run {
+  0% {
+    -webkit-transform: translate(-10vw, -3vh);
+    transform: translate(-10vw, -3vh);
+  }
+
+  100% {
+    -webkit-transform: translate(110vw -3vh);
+    transform: translate(110vw, -3vh);
+  }
+}
+
+footer {
+  width: 100%;
+  /* height: 4vh; */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding-bottom: 5px;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: var(--neongreen);
+  font-family: "Charm", cursive;
+}
+footer::before {
+  content: "Une souris verte,";
+  -webkit-animation: footerTxt 15s linear infinite;
+  animation: footerTxt 15s linear infinite;
+}
+@-webkit-keyframes footerTxt {
+  0% {
+    content: "hello";
+  }
+
+  100% {
+    content: "hello";
+  }
+}
+
+@keyframes footerTxt {
+  0% {
+    content: "";
+  }
+  5% {
+    content: "Une souris verte,";
+  }
+
+  10% {
+    content: "Qui courait dans l'herbe,";
+  }
+
+  15% {
+    content: "Je l'attrape par la queue,";
+  }
+
+  20% {
+    content: "Je la montre à ces messieurs.";
+  }
+  25% {
+    content: "";
+  }
+  30% {
+    content: "Ces messieurs me disent :";
+  }
+  35% {
+    content: "« Trempez-la dans l'huile,";
+  }
+  40% {
+    content: "Trempez-la dans l'eau,";
+  }
+  45% {
+    content: "Ça fera un escargot tout chaud. »";
+  }
+  50% {
+    content: "";
+  }
+  55% {
+    content: "Je la mets dans mon chapeau,";
+  }
+  60% {
+    content: "Elle me dit qu'il fait trop chaud,";
+  }
+  65% {
+    content: "Je la mets dans un tiroir,";
+  }
+  70% {
+    content: "Elle me dit qu'il fait trop noir.";
+  }
+  75% {
+    content: "Je la mets dans ma culotte,";
+  }
+  80% {
+    content: "Elle me fait… trois petites crottes.";
+  }
+  85% {
+    content: "";
+  }
+  100% {
+    content: "";
+  }
+}
+
+/* menu */
+.pie {
+  /* -webkit-tap-highlight-color: transparent; */
+  /* background: #000; */
+  border-radius: 50%;
+  box-shadow: 0 0 4px 5px var(--neongreen);
+  height: 400px;
+  left: -200px;
+  position: absolute;
+  top: -200px;
+  width: 400px;
+  transform: translateX(-200px) translateY(-200px);
+  transition: transform 300ms;
+  z-index: 1;
+}
+
+.pie-color:hover {
+  background-color: var(--neonpink);
+}
+
+.pie1 {
+  clip-path: polygon(200px 200px, 344px 450px, 0 450px);
+  transition-delay: 30ms;
+}
+.pie2 {
+  clip-path: polygon(200px 200px, 344px 450px, 450px 344px);
+  transition-delay: 60ms;
+}
+.pie3 {
+  clip-path: polygon(200px 200px, 450px 0, 450px 344px);
+  transition-delay: 90ms;
+}
+.pie-color {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.pie-color1 {
+  background-color: var(--pie1);
+  clip-path: polygon(200px 200px, 344px 450px, 0 450px);
+}
+.pie-color2 {
+  background-color: var(--pie2);
+  clip-path: polygon(200px 200px, 344px 450px, 450px 344px);
+}
+.pie-color3 {
+  background-color: var(--pie3);
+  clip-path: polygon(200px 200px, 450px 0, 450px 344px);
+}
+.icon1 {
+  left: 210px;
+  position: absolute;
+  top: 320px;
+  width: 46px;
+  cursor: url("/assets/svg/mouse-blue.svg"), pointer;
+}
+.icon2 {
+  left: 280px;
+  position: absolute;
+  top: 280px;
+  width: 46px;
+  cursor: url("/assets/svg/mouse-blue.svg"), pointer;
+}
+.icon3 {
+  left: 324px;
+  position: absolute;
+  top: 212px;
+  width: 46px;
+  cursor: url("/assets/svg/mouse-blue.svg"), pointer;
+}
+.menu {
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.2);
+  cursor: url("/assets/svg/mouse-blue.svg"), pointer;
+  height: 200px;
+  left: -100px;
+  position: absolute;
+  top: -100px;
+  width: 200px;
+  z-index: 1;
+}
+.active .menu {
+  background-color: var(--neongreen);
+}
+.hamburger {
+  cursor: url("/assets/svg/mouse-blue.svg"), pointer;
+  height: 45px;
+  left: 55%;
+  position: relative;
+  top: 58%;
+  width: 46px;
+}
+.hamburger path {
+  transition: transform 300ms;
+}
+.hamburger path:nth-child(1) {
+  transform-origin: 25% 29%;
+}
+.hamburger path:nth-child(2) {
+  transform-origin: 50% 50%;
+}
+.hamburger path:nth-child(3) {
+  transform-origin: 75% 72%;
+}
+.hamburger path:nth-child(4) {
+  transform-origin: 75% 29%;
+}
+.hamburger path:nth-child(5) {
+  transform-origin: 25% 72%;
+}
+.active .pie {
+  transform: translateX(0) translateY(0);
+}
+.active .hamburger path:nth-child(1) {
+  transform: rotate(45deg);
+}
+.active .hamburger path:nth-child(2) {
+  transform: scaleX(0);
+}
+.active .hamburger path:nth-child(3) {
+  transform: rotate(45deg);
+}
+.active .hamburger path:nth-child(4) {
+  transform: rotate(-45deg);
+}
+.active .hamburger path:nth-child(5) {
+  transform: rotate(-45deg);
+}
+.active .hamburger path {
+  stroke: var(--neonpink);
+}
