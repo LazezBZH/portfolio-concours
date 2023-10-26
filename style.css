@@ -31,10 +31,9 @@
 body {
   background-color: var(--primary);
   color: var(--text);
-  font-family: "Chakra Petch", sans-serif;
 }
-
-.home-title {
+h1 {
+  font-family: "Chakra Petch", sans-serif;
   margin: 0 0 1rem auto;
   padding-left: 110px;
   padding-right: 50px;
@@ -43,14 +42,11 @@ body {
   font-size: min(6vw, 4rem, 80px);
   text-transform: uppercase;
   -webkit-text-stroke: 2px var(--neongreen-xlight);
-
   text-shadow: 1px 1px 2px var(--neongreen), 0 0 1em var(--neongreen-light),
     0 0 0.2em whitesmoke;
   position: relative;
 }
-
-.home-title::before {
-  content: "et oui, je suis le chat pitre!";
+h1::before {
   width: 0%;
   height: 10%;
   background-color: var(--primary);
@@ -65,14 +61,17 @@ body {
   justify-content: center;
   -webkit-text-stroke: 2px var(--neongreen);
 }
-.home-title:hover {
+.home-title::before {
+  content: "et oui, je suis le chat pitre!";
+}
+h1:hover {
   -webkit-text-stroke: 2px transparent;
 
   text-shadow: 1px 1px 2px transparent, 0 0 1em transparent,
     0 0 0.2em transparent;
   color: transparent;
 }
-.home-title:hover::before {
+h1:hover::before {
   color: var(--primary);
   -webkit-text-stroke: 2px var(--neongreen);
   text-shadow: 1px 1px 2px var(--neongreen), 0 0 1em var(--neongreen-light),
@@ -81,11 +80,13 @@ body {
   height: 100%;
   opacity: 1;
   transition: width 20ms, opacity 00ms;
-  animation: change-text 1500ms 1;
   z-index: 1;
 }
+.home-title:hover::before {
+  animation: change-text_home 1500ms 1;
+}
 
-@keyframes change-text {
+@keyframes change-text_home {
   0% {
     content: "";
   }
@@ -119,6 +120,7 @@ body {
   }
 }
 main {
+  font-family: "Chakra Petch", sans-serif;
   margin: auto;
   width: 90%;
   height: 60vh;
@@ -381,28 +383,28 @@ footer::before {
   position: absolute;
   top: 320px;
   width: 46px;
-  cursor: url("/assets/svg/mouse-blue.svg"), pointer;
+  cursor: url("/assets/svg/mouse-black.svg"), pointer;
 }
 .icon2 {
   left: 280px;
   position: absolute;
   top: 280px;
   width: 46px;
-  cursor: url("/assets/svg/mouse-blue.svg"), pointer;
+  cursor: url("/assets/svg/mouse-black.svg"), pointer;
 }
 .icon3 {
   left: 324px;
   position: absolute;
   top: 212px;
   width: 46px;
-  cursor: url("/assets/svg/mouse-blue.svg"), pointer;
+  cursor: url("/assets/svg/mouse-black.svg"), pointer;
 }
 .menu {
   -webkit-tap-highlight-color: transparent;
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.2);
-  cursor: url("/assets/svg/mouse-blue.svg"), pointer;
+  cursor: url("/assets/svg/mouse-black.svg"), pointer;
   height: 200px;
   left: -100px;
   position: absolute;
@@ -413,8 +415,11 @@ footer::before {
 .active .menu {
   background-color: var(--neongreen);
 }
+.mouse-cursor {
+  cursor: url("/assets/svg/mouse-black.svg"), pointer;
+}
 .hamburger {
-  cursor: url("/assets/svg/mouse-blue.svg"), pointer;
+  cursor: url("/assets/svg/mouse-black.svg"), pointer;
   height: 45px;
   left: 55%;
   position: relative;
