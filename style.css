@@ -190,7 +190,7 @@ main a {
   overflow: hidden;
   background-color: var(--primary);
   z-index: -1;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 .bg {
   content: "";
@@ -202,7 +202,7 @@ main a {
   top: 0%;
   left: -10vw;
   right: 0;
-  height: 98vh;
+  height: 98dvh;
   -webkit-transform: translate(0, -3vh);
   transform: translate(0, -3vh);
   -webkit-animation: run 10s linear infinite;
