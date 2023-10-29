@@ -88,10 +88,10 @@
   align-items: center;
 }
 .card-art_1 {
-  height: 290px;
+  height: 250px;
 }
 .card-art_2 {
-  height: 290px;
+  height: 250px;
 }
 .card-art:hover {
   border: solid 5px var(--neonblue);
