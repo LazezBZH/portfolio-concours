@@ -85,7 +85,39 @@ h1:hover::before {
 .home-title:hover::before {
   animation: change-text_home 1500ms 1;
 }
+@-webkit-keyframes change-text_home {
+  0% {
+    content: "";
+  }
+  12% {
+    content: "et";
+  }
+  23% {
+    content: "et oui";
+  }
+  34% {
+    content: "et oui,";
+  }
+  45% {
+    content: "et oui, je";
+  }
+  56% {
+    content: "et oui, je suis";
+  }
+  67% {
+    content: "et oui, je suis le";
+  }
+  78% {
+    content: "et oui, je suis le chat";
+  }
+  89% {
+    content: "et oui, je suis le chat pitre";
+  }
 
+  100% {
+    content: "et oui, je suis le chat pitre!";
+  }
+}
 @keyframes change-text_home {
   0% {
     content: "";
@@ -197,7 +229,7 @@ main a {
 .bg {
   content: "";
   position: absolute;
-  background: url(assets/svg/catandmouse.svg);
+  background-image: url(assets/svg/catandmouse.svg);
   background-repeat: no-repeat;
   background-position: right 100% bottom 0%;
   background-size: 10%;
@@ -207,10 +239,8 @@ main a {
   height: 98dvh;
   -webkit-transform: translate(0, -3vh);
   transform: translate(0, -3vh);
-  -webkit-animation: run 10s linear infinite;
-  animation: run 10s linear infinite;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation: run 7s linear infinite;
+  animation: run 7s linear infinite;
   transition-timing-function: ease-in;
 }
 @-webkit-keyframes run {

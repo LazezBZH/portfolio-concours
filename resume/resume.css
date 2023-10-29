@@ -1,0 +1,249 @@
+.resume-title::before {
+  top: 0%;
+  left: 70%;
+  transform: translate(-60%, 70%);
+}
+.resume-title::before {
+  content: "la croyance populaire prétend que j'ai 7 voire 9 vies!";
+}
+
+.resume-title:hover::before {
+  animation: change-text_resume 1500ms 1;
+}
+
+@keyframes change-text_resume {
+  0% {
+    content: "";
+  }
+  10% {
+    content: "la";
+  }
+  20% {
+    content: "la croyance";
+  }
+  30% {
+    content: "la croyance populaire";
+  }
+  40% {
+    content: "la croyance populaire prétend";
+  }
+  50% {
+    content: "la croyance populaire prétend que";
+  }
+  60% {
+    content: "la croyance populaire prétend que j'ai";
+  }
+  70% {
+    content: "la croyance populaire prétend que j'ai 7";
+  }
+  80% {
+    content: "la croyance populaire prétend que j'ai 7 voire";
+  }
+  90% {
+    content: "la croyance populaire prétend que j'ai 7 voire 9";
+  }
+
+  100% {
+    content: "la croyance populaire prétend que j'ai 7 voire 9 vies!";
+  }
+}
+@-webkit-keyframes change-text_resume {
+  0% {
+    content: "";
+  }
+  10% {
+    content: "la";
+  }
+  20% {
+    content: "la croyance";
+  }
+  30% {
+    content: "la croyance populaire";
+  }
+  40% {
+    content: "la croyance populaire prétend";
+  }
+  50% {
+    content: "la croyance populaire prétend que";
+  }
+  60% {
+    content: "la croyance populaire prétend que j'ai";
+  }
+  70% {
+    content: "la croyance populaire prétend que j'ai 7";
+  }
+  80% {
+    content: "la croyance populaire prétend que j'ai 7 voire";
+  }
+  90% {
+    content: "la croyance populaire prétend que j'ai 7 voire 9";
+  }
+
+  100% {
+    content: "la croyance populaire prétend que j'ai 7 voire 9 vies!";
+  }
+}
+
+.resume-main {
+  max-width: 900px;
+  bottom: 35%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.resume-main h2 {
+  color: var(--neongreen);
+  text-transform: uppercase;
+}
+.resume-main p {
+  text-align: left;
+}
+.resume-main .pink {
+  color: var(--neonpink);
+}
+.resume-main .purple {
+  color: var(--neonpurple);
+  text-transform: uppercase;
+}
+.resume-section {
+  width: 300px;
+  height: 300px;
+  background-color: var(--primary);
+  /* border: solid 2px black; */
+  opacity: 0;
+}
+.resume-section:nth-child(1) {
+  animation: appear 3s ease-in-out 1s 1 normal forwards;
+}
+.resume-section:nth-child(2) {
+  animation: appear 3s ease-in-out 2s 1 normal forwards;
+}
+.resume-section:nth-child(3) {
+  animation: appear 3s ease-in-out 3s 1 normal forwards;
+}
+.resume-section:nth-child(4) {
+  animation: appear 3s ease-in-out 4s 1 normal forwards;
+}
+.resume-section:nth-child(5) {
+  animation: appear 3s ease-in-out 5s 1 normal forwards;
+}
+.resume-section:nth-child(6) {
+  animation: appear 3s ease-in-out 6s 1 normal forwards;
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* bg image */
+.bg-container_resume {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+  overflow: hidden;
+  background-color: var(--primary);
+  z-index: -1;
+  min-height: 100dvh;
+}
+.bg_resume {
+  content: "";
+  position: absolute;
+  background-image: url(../assets/svg/catandmouse.svg),
+    url(../assets/svg/catandmouse-blue.svg),
+    url(../assets/svg/catandmouse-inverse.svg),
+    url(../assets/svg/catandmouse.svg), url(../assets/svg/catandmouse-blue.svg);
+  background-repeat: no-repeat;
+  background-position: right 100% top 0, right 75% top 0, right 50% top 0,
+    right 25% top 0, right 0% top 0;
+  background-size: min(20dvh, 22vw);
+  top: 25%;
+  left: -100vw;
+  right: 0;
+  height: 15dvh;
+  width: 100vw;
+  -webkit-transform: translate(0, -3vh);
+  transform: translate(0, -3vh);
+  -webkit-animation: run 15s linear infinite;
+  animation: run 15s linear infinite;
+  transition-timing-function: ease-in;
+}
+@-webkit-keyframes run {
+  0% {
+    -webkit-transform: translate(-10vw, -3vh);
+    transform: translate(-10vw, -3vh);
+  }
+
+  100% {
+    -webkit-transform: translate(110vw -3vh);
+    transform: translate(200vw, -3vh);
+  }
+}
+
+@keyframes run {
+  0% {
+    -webkit-transform: translate(-10vw, -3vh);
+    transform: translate(-10vw, -3vh);
+  }
+
+  100% {
+    -webkit-transform: translate(110vw -3vh);
+    transform: translate(200vw, -3vh);
+  }
+}
+
+.resume-section {
+  /* color: black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-left: 30px;
+  align-items: start;
+}
+.resume-section_1 img,
+.resume-section_6 img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+.resume-section_5 img {
+  position: absolute;
+  width: 80px;
+  top: 10px;
+  right: 10px;
+}
+.sub-section_5 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.bold {
+  font-weight: bold;
+}
+.resume-section ul {
+  list-style: url("/assets/svg/kitten-small.svg");
+  margin-left: 40px;
+}
+.resume-section a {
+  font-weight: bold;
+  font-size: 1.2rem;
+}

@@ -6,6 +6,33 @@
   animation: change-text_art 1500ms 1;
 }
 
+@-webkit-keyframes change-text_art {
+  0% {
+    content: "";
+  }
+  15% {
+    content: "méfiez";
+  }
+  30% {
+    content: "méfiez-vous";
+  }
+  45% {
+    content: "méfiez-vous du";
+  }
+  60% {
+    content: "méfiez-vous du chat";
+  }
+  75% {
+    content: "méfiez-vous du chat qui";
+  }
+  90% {
+    content: "méfiez-vous du chat qui dort";
+  }
+
+  100% {
+    content: "méfiez-vous du chat qui dort!";
+  }
+}
 @keyframes change-text_art {
   0% {
     content: "";

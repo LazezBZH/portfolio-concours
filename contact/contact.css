@@ -5,6 +5,35 @@
 .contact-title:hover::before {
   animation: change-text_contact 1500ms 1;
 }
+@-webkit-keyframes change-text_contact {
+  0% {
+    content: "";
+  }
+  15% {
+    content: "le";
+  }
+  30% {
+    content: "le chat";
+  }
+  45% {
+    content: "le chat pitre";
+  }
+  56% {
+    content: "le chat pitre aime";
+  }
+  68% {
+    content: "le chat pitre aime les";
+  }
+  80% {
+    content: "le chat pitre aime les jeux ";
+  }
+  92% {
+    content: "le chat pitre aime les jeux de";
+  }
+  100% {
+    content: "le chat pitre aime les jeux de mots.";
+  }
+}
 @keyframes change-text_contact {
   0% {
     content: "";
