@@ -1,0 +1,280 @@
+:root {
+  --primary: black;
+  --neongreen: rgb(0, 255, 26);
+  --neongreen-light: rgba(0, 255, 26, 0.4);
+  --neongreen-xlight: rgba(0, 255, 26, 0.2);
+  --neongreen-xxlight: rgba(0, 255, 26, 0.1);
+  --neonyellow: rgb(255, 240, 31);
+  --neonpink: rgb(255, 113, 206);
+  --neonblue: rgb(4, 217, 255);
+  --neonblue-light: rgba(4, 217, 255, 0.4);
+  --neonblue-xlight: rgba(4, 217, 255, 0.2);
+  --neonblue-xxlight: rgba(4, 217, 255, 0.1);
+  --neonpurple: rgb(210, 143, 248);
+  --pie3: rgb(43, 43, 43);
+  --pie2: rgb(57, 57, 57);
+  --pie1: rgb(71, 71, 71);
+  --text: whitesmoke;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+main {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: url("/assets/svg/patte-green.svg"), default;
+}
+#root {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  cursor: url("/assets/svg/patte-green.svg"), default;
+  flex-grow: 1;
+  padding: 1rem 0;
+  margin: auto;
+}
+h1 {
+  color: var(--text);
+  margin-top: 50px;
+  text-align: center;
+}
+.name {
+  color: var(--neongreen);
+  text-transform: capitalize;
+}
+.tag {
+  color: var(--neonpink);
+  text-transform: capitalize;
+}
+.back-arts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--neongreen);
+  font-size: bolder;
+}
+.back-arts img {
+  width: 80%;
+}
+
+.artCard {
+  cursor: url("/assets/svg/patte-pink.svg"), default;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.artTitle {
+  height: 40%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+}
+
+.innerCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.frontSide,
+.backSide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 5px solid var(--neonblue-light);
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 0 0.3em var(--neonblue-light);
+  font-weight: 700;
+}
+.frontSide {
+  justify-content: space-between;
+  padding: 1rem;
+}
+.backSide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 5px solid var(--neongreen-light);
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 0 0.3em var(--neongreen);
+  font-weight: 700;
+}
+
+.frontSide,
+.frontSide::before {
+  background: linear-gradient(
+    45deg,
+    var(--neonblue-xlight) 0%,
+    var(--neonblue-light) 46%,
+    var(--neonblue) 100%
+  );
+}
+
+.backSide,
+.backSide::before {
+  background-image: linear-gradient(
+    160deg,
+    var(--neongreen-xlight) 0%,
+    var(--neongreen-light) 46%,
+    var(--neongreen) 100%
+  );
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}
+
+.frontSide::before,
+.backSide::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 105%;
+  height: 105%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 5px;
+  filter: blur(20px);
+  animation: animate 5s linear infinite;
+}
+.backSide-content {
+  height: auto;
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+}
+.backSide-content::-webkit-scrollbar {
+  display: none;
+}
+.artTitle_verso {
+  color: var(--neongreen);
+  background-color: var(--primary);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.artTxt,
+.artEffect {
+  width: 90%;
+  font-size: 1.1rem;
+}
+.artTxt_2,
+.artEffect_2 {
+  text-transform: none;
+  color: var(--primary);
+  text-align: left;
+}
+@keyframes animate {
+  0% {
+    opacity: 0.1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.artImg {
+  width: 90%;
+  height: 60%;
+  object-fit: contain;
+  background-color: var(--neonblue);
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px var(--neonblue-xlight);
+}
+.hover {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  transform: rotate(-45deg);
+  animation: clign 3s 3 ease-in-out forwards;
+}
+@keyframes clign {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.tags {
+  display: flex;
+  color: var(--primary);
+  list-style: none;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 5px;
+}
+.tags li button {
+  background-color: var(--neonpurple);
+  padding: 1px 5px;
+  border-radius: 5px;
+  box-shadow: 0.1rem 0.1rem 0 var(--primary);
+  cursor: url("/assets/svg/mouse-pink.svg"), default;
+}

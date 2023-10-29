@@ -80,7 +80,9 @@ h2 {
   justify-content: space-around;
 }
 .tech-btn,
-.category-btn {
+.category-btn,
+.close,
+.auto-stop {
   background-color: var(--primary);
   background-color: rgba(0, 0, 0, 0.1);
   color: var(--text);
@@ -100,8 +102,74 @@ h2 {
 }
 
 .tech-btn:hover,
-.category-btn:hover {
+.category-btn:hover,
+.close:hover,
+.auto-stop:hover {
   border: solid 2px var(--neonblue);
   box-shadow: 4px 4px 1px 1px var(--neonblue-light);
   color: var(--neonpink);
+}
+
+/* ARTS FILTERED */
+.arts {
+  position: absolute;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: black;
+  z-index: 1;
+  display: none;
+}
+.arts-container {
+  width: 80dvw;
+  height: 80dvh;
+  background-color: red;
+  /* width: 100%; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.arts-cards-container {
+  width: 100%;
+  flex-grow: 0.8;
+  display: flex;
+  border: 5px solid #329da8;
+  overflow: hidden;
+}
+.arts-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.arts-card {
+  border: solid 2px black;
+  padding: 1rem;
+  flex-grow: 0.3;
+}
+
+.auto-stop {
+  height: 50px;
+  width: 200px;
+  font-size: 2rem;
+  cursor: url("/assets/svg/mouse-blue.svg"), default;
+  border-radius: 10px;
+}
+.auto-stop:disabled {
+  cursor: not-allowed;
+  background-color: #f07122;
+  border: 2px solid #329da8;
+  color: #329da8;
+}
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 5px;
 }
