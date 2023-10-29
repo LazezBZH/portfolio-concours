@@ -99,6 +99,7 @@ class MyArt {
               <ul class="tags">${tagHtml}</ul>
                 <h2 class="artTitle" >${this.title}</h2>
                 <img src=${this.src} alt="${this.title}" class="artImg">
+                <button class="showBack">voir&#xA0;détails</button>
             </div>
             <div class="backSide">
                 <div class="backSide-content">
@@ -106,6 +107,7 @@ class MyArt {
                     <p class="artTxt" >Description: <br> <span class="artTxt_2">${this.text}</span></p>
                     <p class="artEffect" >Effets sur les humains: <br><span class="artEffect_2">${this.effect}</span></p>
                 </div>
+                <button class="showFront">voir&#xA0;photo</button>
             </div>
         </div>
     </div>`;

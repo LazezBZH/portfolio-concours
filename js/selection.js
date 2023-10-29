@@ -280,7 +280,7 @@ switch (thisName) {
     thisH1 = "Mes oeuvres dans la <span class='name'>" + thisName + "</span>";
     break;
   default:
-    thisDay = "technologie";
+    thisName = "technique";
     thisH1 =
       "Mes oeuvres réalisées avec la <span class='name'>" +
       thisName +
@@ -297,15 +297,15 @@ list.displayArts(listToDisplay);
 
 artTitle.innerHTML = `<h1>${thisH1} <span class="tag">"${tag}"</span></h1>`;
 
-const artImg = document.querySelectorAll(".artImg");
-const backSide = document.querySelectorAll(".backSide-content");
+const showBack = document.querySelectorAll(".showBack");
+const showFront = document.querySelectorAll(".showFront");
 
-artImg.forEach((image) => image.addEventListener("mouseenter", showBack));
-backSide.forEach((back) => back.addEventListener("mouseleave", showFront));
-function showBack(e) {
+showBack.forEach((elt) => elt.addEventListener("click", showTheBack));
+showFront.forEach((elt) => elt.addEventListener("click", showTheFront));
+function showTheBack(e) {
   e.target.parentNode.parentNode.style.transform = "rotateY(180deg)";
 }
-function showFront(e) {
+function showTheFront(e) {
   e.target.parentNode.parentNode.style.transform = "rotateY(0deg)";
 }
 

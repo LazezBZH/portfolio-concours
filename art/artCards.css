@@ -278,3 +278,35 @@ h1 {
   box-shadow: 0.1rem 0.1rem 0 var(--primary);
   cursor: url("/assets/svg/mouse-pink.svg"), default;
 }
+.showBack,
+.showFront {
+  position: absolute;
+  right: 0;
+  cursor: url("/assets/svg/mouse-pink.svg"), default;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  width: 25%;
+  height: 25%;
+  /* text-align: right; */
+  padding: 30px 5px 0 30px;
+  padding-top: 10px;
+  padding-left: 10px;
+  color: var(--neonpink);
+  display: flex;
+  justify-content: end;
+}
+.showBack {
+  bottom: 0px;
+  align-items: end;
+}
+.showFront {
+  top: 0px;
+  align-items: start;
+  line-height: 0;
+}
+.showBack:hover,
+.showFront:hover {
+  color: var(--primary);
+}
