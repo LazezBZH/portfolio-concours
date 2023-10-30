@@ -105,7 +105,7 @@ class MyArt {
                 <div class="backSide-content">
                     <p class="artTitle_verso" >${this.title}</p>
                     <p class="artTxt" >Description: <br> <span class="artTxt_2">${this.text}</span></p>
-                    <p class="artEffect" >Effets sur les humains: <br><span class="artEffect_2">${this.effect}</span></p>
+                    <p class="artEffect" >Effets sur l'humain: <br><span class="artEffect_2">${this.effect}</span></p>
                 </div>
                 <button class="showFront">voir&#xA0;photo</button>
             </div>
