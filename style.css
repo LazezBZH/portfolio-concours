@@ -27,6 +27,78 @@
   user-select: none;
   cursor: url("/assets/svg/patte-green.svg"), default;
 }
+/* loader début*/
+.loader {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: var(--primary);
+  z-index: -1;
+  position: absolute;
+  background-size: 100%;
+  background-position: top left;
+  animation: grow 3s ease-in-out normal forwards;
+}
+@keyframes grow {
+  0% {
+    background-color: var(--primary);
+    background-size: 100%;
+    background-position: top;
+    z-index: 2;
+    background-image: url(/assets/svg/pas.svg);
+  }
+  2% {
+    background-color: var(--text);
+    background-size: 100%;
+    background-position: top;
+    z-index: 2;
+    background-image: url(/assets/svg/pas.svg);
+  }
+  99% {
+    background-color: var(--text);
+    background-size: 800%;
+    background-position: bottom right;
+    z-index: 2;
+    background-image: url(/assets/svg/pas.svg);
+  }
+  100% {
+    background-color: var(--primary);
+    background-size: 800%;
+    background-position: center center;
+    z-index: -1;
+    background-image: none;
+  }
+}
+@-webkit-keyframes grow {
+  0% {
+    background-color: var(--primary);
+    background-size: 100%;
+    background-position: top;
+    z-index: 2;
+    background-image: none;
+  }
+  2% {
+    background-color: var(--text);
+    background-size: 100%;
+    background-position: top;
+    z-index: 2;
+    background-image: url(/assets/svg/pas.svg);
+  }
+  99% {
+    background-color: var(--text);
+    background-size: 800%;
+    background-position: bottom right;
+    z-index: 2;
+    background-image: url(/assets/svg/pas.svg);
+  }
+  100% {
+    background-color: var(--primary);
+    background-size: 800%;
+    background-position: bottom right;
+    z-index: -1;
+    background-image: none;
+  }
+}
+/* loader fin */
 
 body {
   background-color: var(--primary);
