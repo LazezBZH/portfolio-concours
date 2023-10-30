@@ -50,7 +50,7 @@ class MyArt {
           thisName = "technology";
           break;
         case "claws":
-          tag = "griffes";
+          thisTag = "griffes";
           thisName = "technology";
           break;
         case "tongue":

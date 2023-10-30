@@ -53,6 +53,7 @@ h1 {
   color: var(--text);
   margin-top: 50px;
   text-align: center;
+  font-size: min(6vw, 4rem, 80px);
 }
 .name {
   color: var(--neongreen);
