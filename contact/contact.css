@@ -5,6 +5,7 @@
 .contact-title:hover::before {
   animation: change-text_contact 1500ms 1;
 }
+
 @-webkit-keyframes change-text_contact {
   0% {
     content: "";

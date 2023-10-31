@@ -555,9 +555,11 @@ footer::before {
 .active .hamburger path:nth-child(2) {
   transform: scaleX(0);
 }
+
 .active .hamburger path:nth-child(3) {
   transform: rotate(45deg);
 }
+
 .active .hamburger path:nth-child(4) {
   transform: rotate(-45deg);
 }

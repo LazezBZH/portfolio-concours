@@ -160,6 +160,7 @@
     opacity: 1;
   }
 }
+
 /*début bg image */
 .bg-container_resume {
   position: absolute;
@@ -218,6 +219,7 @@
   }
 }
 /* fin bg image */
+
 .resume-section_1 img,
 .resume-section_6 img {
   width: 80%;

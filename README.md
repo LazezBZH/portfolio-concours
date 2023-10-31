@@ -74,6 +74,7 @@ Objectif: "Créer et coder un Portfolio."
 
 - j'avoue avoir beaucoup fait marcher mon imagination
 - fonction de tri classique mais qui demande parfois du temps à mettre en oeuvre
+- mini défi perso = avoir un site responsive sans utiliser de mediaquery css
 
 > Un peu d'humour dans la grisaille de l'automne!
 

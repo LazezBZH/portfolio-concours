@@ -184,6 +184,7 @@ h1 {
   border-radius: 5px;
   filter: blur(20px);
   animation: animate 5s linear infinite;
+  -webkit-animation: animate 5s linear infinite;
 }
 .backSide-content {
   height: auto;
@@ -222,7 +223,21 @@ h1 {
   color: var(--primary);
   text-align: left;
 }
+
 @keyframes animate {
+  0% {
+    opacity: 0.1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+@-webkit-keyframess animate {
   0% {
     opacity: 0.1;
   }
@@ -251,8 +266,17 @@ h1 {
   top: 5px;
   transform: rotate(-45deg);
   animation: clign 3s 3 ease-in-out forwards;
+  -webkit-animation: clign 3s 3 ease-in-out forwards;
 }
 @keyframes clign {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes clign {
   from {
     opacity: 1;
   }
