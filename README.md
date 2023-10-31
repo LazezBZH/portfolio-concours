@@ -12,12 +12,12 @@ Objectif: "Créer et coder un Portfolio."
 
 - [Consignes](#consignes)
 - [Réalisation](#réalisation)
-  - [Quatre pages](quatre-pages)
+  - [4 pages](#4-pages)
   - [Technos](#technos)
   - [Outils](#outils)
 - [Screenshot](#screenshot)
 - [Bilan](#bilan)
-- [La voir en action](#la-voir-en-action)
+- [En action](#en-action)
 - [Moi](#moi)
 
 ## Consignes
@@ -77,7 +77,7 @@ Objectif: "Créer et coder un Portfolio."
 
 > Un peu d'humour dans la grisaille de l'automne!
 
-## Le voir en action
+## En action
 
 - Déploiement: [MES OEUVRES, PAR PITRE LE CHAT](https://mon-superbe-portfolio.netlify.app/)
 
