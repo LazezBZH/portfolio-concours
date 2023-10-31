@@ -12,7 +12,7 @@ Objectif: "Créer et coder un Portfolio."
 
 - [Consignes](#consignes)
 - [Réalisation](#réalisation)
-  - [4 pages](4-pages)
+  - [Quatre pages](quatre-pages)
   - [Technos](#technos)
   - [Outils](#outils)
 - [Screenshot](#screenshot)
