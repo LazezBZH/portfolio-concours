@@ -12,22 +12,26 @@ Objectif: "Créer et coder un Portfolio."
 
 - [Consignes](#consignes)
 - [Réalisation](#réalisation)
-  - [4 pages](4-pages)
+  - [4 pages](#4-pages)
   - [Technos](#technos)
   - [Outils](#outils)
 - [Screenshot](#screenshot)
 - [Bilan](#bilan)
-- [La voir en action](#la-voir-en-action)
+- [En action](#en-action)
 - [Moi](#moi)
 
 ## Consignes
 
 > Votre travail doit être ORIGINAL et UNIQUE, autant au niveau du DESIGN que du CODE.
+> 
 > Aucune ressemblance avec quoique ce soit sur le web n'est tolérée, sous peine d'être exclu du concours.
+> 
 > Partez d'une feuille blanche et tentez de tout créer de A à Z, on doit pouvoir sentir instantanément que tout vient de vous.
 >
 > Votre création doit également être faite spécialement pour le concours, dans le temps imparti.
+> 
 > Il est interdit d'utiliser une création qu'on aurait déjà faite, et de participer à un concours avec.
+> 
 > Ce serait injuste envers ceux qui participent dans le temps imparti.
 >
 > Vous n'êtes pas obligés de créer un portfolio pour vous-même, vous pouvez créer un portfolio fictif pour un : photographe, architecte, entrepreneur, développeur, designer, paysagiste, etc...
@@ -78,7 +82,7 @@ Objectif: "Créer et coder un Portfolio."
 
 > Un peu d'humour dans la grisaille de l'automne!
 
-## Le voir en action
+## En action
 
 - Déploiement: [MES OEUVRES, PAR PITRE LE CHAT](https://mon-superbe-portfolio.netlify.app/)
 
