@@ -243,6 +243,12 @@
 .resume-section ul {
   list-style: url("/assets/svg/kitten-small.svg");
   margin-left: 40px;
+  margin-top: 10px;
+  display: flex;
+  width: 60%;
+  flex-wrap: wrap;
+  gap: 0px 30px;
+  justify-content: space-between;
 }
 
 .resume-section a {
@@ -293,8 +299,8 @@
   border: none;
   color: var(--txt);
   cursor: url("/assets/svg/mouse-green.svg"), default;
-  width: 100%;
-  height: 150%;
+  width: 50px;
+  height: 50px;
   text-align: left;
-  padding: 5px 0;
+  padding: 0;
 }

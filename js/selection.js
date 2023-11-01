@@ -3,7 +3,7 @@ const artTitle = document.querySelector(".arts-title");
 
 let tag = query("tag");
 thisName = query("name");
-console.log(thisName);
+
 thisH1 = titleToDisplay(thisName);
 tagToDisplay = tagToBeDisplay(tag);
 

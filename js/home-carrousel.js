@@ -85,7 +85,6 @@ function init() {
   cards.innerHTML = "";
   cards.innerHTML = `<p class="card">${homeCarrouselTxt[index].text}</p>`;
   if (document.querySelector(".day")) {
-    console.log(thisMonth, currentDate.getMonth());
     if (intervalle === -1) {
       document.querySelector(
         ".day"

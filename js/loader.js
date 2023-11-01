@@ -13,5 +13,4 @@ function stopLoader() {
     loaded = true;
     sessionStorage.setItem("loaded", loaded);
   }, 3000);
-  console.log(loaded);
 }
