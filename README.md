@@ -14,6 +14,7 @@ Objectif: "Créer et coder un Portfolio."
 - [Réalisation](#réalisation)
   - [Sujet](#sujet)
   - [4 pages](#4-pages)
+  - [Détails](#détails)
   - [Technos](#technos)
   - [Outils](#outils)
 - [Screenshot](#screenshot)
@@ -43,8 +44,10 @@ Objectif: "Créer et coder un Portfolio."
 ### Sujet
 
 Portfolio humoristique d'un artiste fictif.
+
 Tout le monde le connait, beaucoup l'aiment, certains même l'adorent au point d'en avoir fait un dieu, d'autres le détestent;
 personne n'y est indiférent.
+
 Certaines de ses oeuvres sont détestées voire craintes même par ses adorateurs.
 
 ### 4 pages
@@ -53,6 +56,8 @@ Certaines de ses oeuvres sont détestées voire craintes même par ses adorateur
 - Page CV détaillant plus le parcours
 - Page "oeuvres"
 - Page contact (linktree, vrais liens)
+
+## Détails
 
 - Effets au hover (soit js soit css)
 - Animations CSS

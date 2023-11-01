@@ -1,5 +1,6 @@
 const main = document.getElementById("root");
 const artTitle = document.querySelector(".arts-title");
+const seeAll = document.querySelector(".see-all");
 
 let tag = query("tag");
 thisName = query("name");
@@ -13,10 +14,19 @@ for (let i = 0; i < myArts.length; i++) {
   let art = new MyArt(myArts[i]);
   list.add(art);
 }
-let listToDisplay = list.all.filter((art) => art.tags.includes(query("tag")));
-list.displayArts(listToDisplay);
+let listToDisplay = "";
+if (tag) {
+  // si une sélection a été faite
+  listToDisplay = list.all.filter((art) => art.tags.includes(query("tag")));
+  artTitle.innerHTML = `<h1>${thisH1} <span class="tag">"${tagToDisplay}"</span></h1>`;
+} else {
+  // pas de sélection, tout est visible
+  listToDisplay = list.all;
+  artTitle.innerHTML = `<h1>Toutes mes oeuvres!</h1>`;
+  seeAll.style.display = "none";
+}
 
-artTitle.innerHTML = `<h1>${thisH1} <span class="tag">"${tagToDisplay}"</span></h1>`;
+list.displayArts(listToDisplay);
 
 const showBack = document.querySelectorAll(".showBack");
 const showFront = document.querySelectorAll(".showFront");
