@@ -12,10 +12,12 @@ Objectif: "Créer et coder un Portfolio."
 
 - [Consignes](#consignes)
 - [Réalisation](#réalisation)
+  - [Sujet](#sujet)
   - [4 pages](#4-pages)
   - [Technos](#technos)
   - [Outils](#outils)
 - [Screenshot](#screenshot)
+- [Lighthouse](#lighthouse)
 - [Bilan](#bilan)
 - [En action](#en-action)
 - [Moi](#moi)
@@ -37,6 +39,13 @@ Objectif: "Créer et coder un Portfolio."
 > Vous n'êtes pas obligés de créer un portfolio pour vous-même, vous pouvez créer un portfolio fictif pour un : photographe, architecte, entrepreneur, développeur, designer, paysagiste, etc...
 
 ## Réalisation
+
+### Sujet
+
+Portfolio humoristique d'un artiste fictif.
+Tout le monde le connait, beaucoup l'aiment, certains même l'adorent au point d'en avoir fait un dieu, d'autres le détestent;
+personne n'y est indiférent.
+Certaines de ses oeuvres sont détestées voire craintes même par ses adorateurs.
 
 ### 4 pages
 
@@ -73,6 +82,10 @@ Objectif: "Créer et coder un Portfolio."
 ## Screenshot
 
 ![sreen](/assets/screen.png)
+
+## Lighthouse
+
+![lighthouse](/assets/docs/LIGHTHOUSE.gif)
 
 ## Bilan
 
