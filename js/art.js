@@ -1,3 +1,5 @@
+// générer l'url de la sélection
+
 const buttons = document.querySelectorAll(".buttons");
 
 buttons.forEach((btn) => btn.addEventListener("click", setTag));

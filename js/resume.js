@@ -3,6 +3,7 @@ const cvBtn = document.querySelector(".cvBtn");
 const closeEmbed = document.querySelector(".closeEmbed");
 const resumeToSelection = document.querySelectorAll(".resumeToSelection");
 
+// voir une sélection d'après les compétences du cv
 resumeToSelection.forEach((select) =>
   select.addEventListener("click", setSelection)
 );
@@ -14,6 +15,7 @@ function setSelection(e) {
   window.location.href = "/art/selection.html?tag=" + tag + "&name=" + name;
 }
 
+// visuliser cv pdf
 function showCV() {
   cvEmbed.style.display = "block";
   window.scrollTo(0, 0);
@@ -21,6 +23,8 @@ function showCV() {
 function hideCV() {
   cvEmbed.style.display = "none";
 }
+
+// masquer en version mobile la visualisation du pdf (suite à constat enmbed ne fonctionne pas sur mobil)
 function isMobileDevice() {
   if (
     navigator.userAgent.match(/iPhone/i) ||
@@ -39,7 +43,7 @@ function isMobileDevice() {
 }
 isMobileDevice();
 
-// resume loader
+// resume loader = empêcher qu'il ne soit joué à chaque fois
 
 const resumeLoader = document.querySelectorAll(".resume-section");
 const resumeMain = document.querySelector(".resume-main");
@@ -47,7 +51,7 @@ const resumeMain = document.querySelector(".resume-main");
 window.addEventListener("load", stopResumeLoader);
 
 let resumeLoaded = sessionStorage.getItem("resume-loaded") || false;
-console.log(resumeLoaded);
+
 if (resumeLoaded) {
   resumeLoader.forEach((resumeLoad) =>
     resumeLoad.classList.remove("resume-section_load")
@@ -60,5 +64,4 @@ function stopResumeLoader() {
     resumeLoaded = true;
     sessionStorage.setItem("resume-loaded", resumeLoaded);
   }, 3000);
-  console.log(resumeLoaded);
 }

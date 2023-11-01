@@ -1,3 +1,5 @@
+// loader home = empêcher qu'il ne soit joué à chaque fois
+
 const loader = document.querySelector(".loader");
 
 window.addEventListener("load", stopLoader);

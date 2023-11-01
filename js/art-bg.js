@@ -1,3 +1,5 @@
+// change, avec délai, les couleurs de la bg img au hover des deux zones de tags
+
 const bg = document.querySelector(".bg");
 const cards = document.querySelectorAll(".card-art");
 

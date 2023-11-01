@@ -1,3 +1,5 @@
+// constructeur de la sélection
+
 class MySelection {
   constructor() {
     this.all = [];

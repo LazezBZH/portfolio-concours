@@ -1,52 +1,12 @@
 const cards = document.querySelector(".cards");
 const card = document.querySelectorAll(".card");
 
-let homeTxt = [
-  {
-    text: "<span class=day ></span>",
-  },
-  {
-    text: "<span class=day ></span>",
-  },
-  {
-    text: "Survolez cete bulle pour bloquer le défilement.",
-  },
-  {
-    text: "Sur téléphone/tablette, cliquez à l'intérieur puis à l'extérieur de la bulle.",
-  },
-  {
-    text: "Sur téléphone/tablette, cliquez à l'intérieur puis à l'extérieur de la bulle.",
-  },
-  {
-    text: "N'hésitez pas à suvoler chaque section.",
-  },
-  {
-    text: "Artiste félin de renommée internationale, mon style artistique, bien que pas toujours apprécié à sa juste valeur, est connu de tous.",
-  },
-  {
-    text: "Artiste félin de renommée internationale, mon style artistique, bien que pas toujours apprécié à sa juste valeur, est connu de tous.",
-  },
-  {
-    text: "Artiste félin de renommée internationale, mon style artistique, bien que pas toujours apprécié à sa juste valeur, est connu de tous.",
-  },
-  {
-    text: "Utilisez le menu burger (hum c'est bon les burgers, même si mon ami Garfield préfère les pizzas!) pour visiter mon site et découvrir mon art.",
-  },
-  {
-    text: "Utilisez le menu burger (hum c'est bon les burgers, même si mon ami Garfield préfère les pizzas!) pour visiter mon site et découvrir mon art.",
-  },
-  {
-    text: "Utilisez le menu burger (hum c'est bon les burgers, même si mon ami Garfield préfère les pizzas!) pour visiter mon site et découvrir mon art.",
-  },
-  {
-    text: "J'espère que vous apprécierez la visite!",
-  },
-];
 let index = 0;
 
 cards.addEventListener("mouseenter", stopAuto);
 cards.addEventListener("mouseleave", runAuto);
 
+// récupération de la date et affichage en français
 let currentDate = new Date();
 let thisDay = currentDate.getDay();
 let thisMonth = currentDate.getMonth();
@@ -120,9 +80,10 @@ switch (currentDate.getMonth()) {
     thisMonth = "Décembre";
 }
 
+// générer le contenu du text carrousel
 function init() {
   cards.innerHTML = "";
-  cards.innerHTML = `<p class="card">${homeTxt[index].text}</p>`;
+  cards.innerHTML = `<p class="card">${homeCarrouselTxt[index].text}</p>`;
   if (document.querySelector(".day")) {
     console.log(thisMonth, currentDate.getMonth());
     if (intervalle === -1) {
@@ -140,8 +101,9 @@ function init() {
 }
 init();
 
+// text carrousel défile auto, s'arrête au mousenter, redémarre au mouseleave
 function showNext() {
-  if (index == homeTxt.length - 1) index = -1;
+  if (index == homeCarrouselTxt.length - 1) index = -1;
   index++;
   init();
 }

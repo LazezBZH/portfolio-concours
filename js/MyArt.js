@@ -1,7 +1,10 @@
+// constructeur d'une "cards oeuvre"
+
 class MyArt {
   constructor(myArts) {
     this.title = myArts.title;
-    this.src = myArts.src;
+    this.artName = myArts.artName;
+    this.artCat = myArts.artCat;
     this.text = myArts.text;
     this.effect = myArts.effect;
     this.tags = myArts.tags;
@@ -12,6 +15,7 @@ class MyArt {
 
     for (let i = 0; i < this.tags.length; i++) {
       let tag = this.tags[i];
+
       switch (tag) {
         case "benefits":
           thisTag = "Bienfaits";
@@ -88,7 +92,7 @@ class MyArt {
 
       tagHtml += `<li  ><button class="tag-art" value=${tag} name=${thisName}>${thisTag}</button></li>`;
     }
-
+    let src = "/assets/works/" + this.artCat + "/" + this.artName + ".webp";
     return `
    <div class="artCard">
 
@@ -98,7 +102,7 @@ class MyArt {
             <div class="frontSide">
               <ul class="tags">${tagHtml}</ul>
                 <h2 class="artTitle" >${this.title}</h2>
-                <img src=${this.src} alt="${this.title}" class="artImg">
+                <img src=${src} alt="${this.title}" class="artImg">
                 <button class="showBack">voir&#xA0;détails</button>
             </div>
             <div class="backSide">
