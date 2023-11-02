@@ -167,3 +167,19 @@ a {
 .linktree .contact-img {
   height: 180px;
 }
+
+.contact-footer {
+  padding-top: 10dvh;
+}
+.link-me {
+  width: 190px;
+  position: absolute;
+  left: 100dvw;
+  bottom: 35px;
+  transform: translateX(-105%);
+  color: var(--neonblue);
+  cursor: url("/assets/svg/mouse-green.svg"), pointer;
+}
+.link-me:hover {
+  color: var(--neonpink);
+}
