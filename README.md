@@ -68,12 +68,14 @@ Certaines de ses oeuvres sont détestées voire craintes même par ses adorateur
 - Tri également possible sur la page CV ainsi que depuis une page contenant une sélection
 - Une carte par oeuvre, se retourne
 - Souris personnalisées
+- Gestion des erreurs
 
 ### Technos
 
 - HTML
 - CSS
 - JS
+- données en json
 - pas de framework, pas de librairie, tout est tricoté à la main
 
 ### Outils

@@ -78,9 +78,16 @@ function titleToDisplay() {
     case "categorie":
       thisH1 = "Mes oeuvres dans la <span class='name'> catégorie</span>";
       break;
-    default:
+    case "technology":
       thisH1 =
         "Mes oeuvres réalisées avec la <span class='name'>technique </span>";
+      break;
+    case "technologie":
+      thisH1 =
+        "Mes oeuvres réalisées avec la <span class='name'>technique </span>";
+      break;
+    default:
+      thisH1 = "error";
   }
   return thisH1;
 }

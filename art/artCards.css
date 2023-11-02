@@ -15,6 +15,7 @@
   --pie2: rgb(57, 57, 57);
   --pie1: rgb(71, 71, 71);
   --text: whitesmoke;
+  --text-light: rgba(245, 245, 245, 0.4);
 }
 *,
 ::before,
@@ -103,7 +104,33 @@ h1 {
 .see-all img {
   width: 80%;
 }
-
+nav {
+  width: 50vw;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+  text-transform: uppercase;
+}
+nav a {
+  color: var(--neongreen);
+  text-decoration: none;
+  border: solid 2px var(--neongreen-light);
+  box-shadow: 2px 3px 2px var(--neongreen-light);
+  padding: 2px;
+  border-radius: 2px;
+  cursor: url("/assets/svg/mouse-blue.svg"), default;
+}
+nav a:hover {
+  color: var(--primary);
+  background-color: var(--neongreen);
+  border: solid 2px var(--primary);
+  box-shadow: 2px 3px 2px var(--text-light);
+}
 .artCard {
   cursor: url("/assets/svg/patte-pink.svg"), default;
   background-color: transparent;
@@ -356,4 +383,10 @@ h1 {
 .showBack:hover,
 .showFront:hover {
   color: var(--primary);
+}
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -1,10 +1,6 @@
 const cards = document.querySelector(".cards");
-const card = document.querySelectorAll(".card");
 
 let index = 0;
-
-cards.addEventListener("mouseenter", stopAuto);
-cards.addEventListener("mouseleave", runAuto);
 
 // récupération de la date et affichage en français
 let currentDate = new Date();
@@ -80,38 +76,50 @@ switch (currentDate.getMonth()) {
     thisMonth = "Décembre";
 }
 
-// générer le contenu du text carrousel
-function init() {
-  cards.innerHTML = "";
-  cards.innerHTML = `<p class="card">${homeCarrouselTxt[index].text}</p>`;
-  if (document.querySelector(".day")) {
-    if (intervalle === -1) {
-      document.querySelector(
-        ".day"
-      ).innerHTML = `Nous sommes le ${thisDay} ${currentDate.getDate()}  ${thisMonth} ${currentDate.getFullYear()}<br> aujourd'hui c'est la mi-août!`;
-    } else {
-      document.querySelector(
-        ".day"
-      ).innerHTML = `Nous sommes le ${thisDay} ${currentDate.getDate()}  ${thisMonth} ${currentDate.getFullYear()}<br> dans ${
-        intervalle + 1
-      } jours ça sera la mi-août!`;
+fetch("/data/homeCarrousel.json")
+  .then(function (response) {
+    if (!response.ok) {
+      throw new Error("HTTP error, status = " + response.status);
     }
-  }
-}
-init();
+    return response.json();
+  })
+  .then(function (json) {
+    cards.addEventListener("mouseenter", stopAuto);
+    cards.addEventListener("mouseleave", runAuto);
 
-// text carrousel défile auto, s'arrête au mousenter, redémarre au mouseleave
-function showNext() {
-  if (index == homeCarrouselTxt.length - 1) index = -1;
-  index++;
-  init();
-}
+    // générer le contenu du text carrousel
+    function init() {
+      cards.innerHTML = "";
+      cards.innerHTML = `<p class="card">${json.homeCarrouselTxt[index].text}</p>`;
+      if (document.querySelector(".day")) {
+        if (intervalle === -1) {
+          document.querySelector(
+            ".day"
+          ).innerHTML = `Nous sommes le ${thisDay} ${currentDate.getDate()}  ${thisMonth} ${currentDate.getFullYear()}<br> aujourd'hui c'est la mi-août!`;
+        } else {
+          document.querySelector(
+            ".day"
+          ).innerHTML = `Nous sommes le ${thisDay} ${currentDate.getDate()}  ${thisMonth} ${currentDate.getFullYear()}<br> dans ${
+            intervalle + 1
+          } jours ça sera la mi-août!`;
+        }
+      }
+    }
+    init();
 
-function runAuto() {
-  autoInterval = setInterval(showNext, 1200);
-}
-runAuto();
+    // text carrousel défile auto, s'arrête au mousenter, redémarre au mouseleave
+    function showNext() {
+      if (index == json.homeCarrouselTxt.length - 1) index = -1;
+      index++;
+      init();
+    }
 
-function stopAuto() {
-  clearInterval(autoInterval);
-}
+    function runAuto() {
+      autoInterval = setInterval(showNext, 1200);
+    }
+    runAuto();
+
+    function stopAuto() {
+      clearInterval(autoInterval);
+    }
+  });

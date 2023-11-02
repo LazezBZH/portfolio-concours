@@ -88,12 +88,18 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .card-art_1 {
   height: 250px;
+  margin-bottom: 12px;
 }
 .card-art_2 {
+  height: 200px;
+}
+.card-art_2container {
   height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card-art:hover {
   border: solid 5px var(--neonblue);
@@ -141,4 +147,32 @@ h2 {
   border: solid 2px var(--neonblue);
   box-shadow: 4px 4px 1px 1px var(--neonblue-light);
   color: var(--neonpink);
+}
+.show-all {
+  width: 100px;
+  /* position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%); */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+.show-all a {
+  color: var(--neongreen);
+  text-decoration: none;
+  border: solid 2px var(--neongreen-light);
+  box-shadow: 2px 3px 2px var(--neongreen-light);
+  padding: 2px;
+  border-radius: 2px;
+  cursor: url("/assets/svg/mouse-blue.svg"), default;
+}
+.show-all a:hover {
+  color: var(--primary);
+  background-color: var(--neongreen);
+  border: solid 2px var(--primary);
+  box-shadow: 2px 3px 2px var(--text-light);
 }
