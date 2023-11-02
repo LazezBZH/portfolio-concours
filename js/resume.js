@@ -43,7 +43,7 @@ function isMobileDevice() {
 }
 isMobileDevice();
 
-// resume loader = empêcher qu'il ne soit joué à chaque fois
+// resume loader apparition fondue = empêcher qu'il ne soit joué à chaque fois
 
 const resumeLoader = document.querySelectorAll(".resume-section");
 const resumeMain = document.querySelector(".resume-main");
@@ -51,17 +51,27 @@ const resumeMain = document.querySelector(".resume-main");
 window.addEventListener("load", stopResumeLoader);
 
 let resumeLoaded = sessionStorage.getItem("resume-loaded") || false;
-
-if (resumeLoaded) {
-  resumeLoader.forEach((resumeLoad) =>
-    resumeLoad.classList.remove("resume-section_load")
-  );
+function setIsLoad() {
+  if (resumeLoaded) {
+    resumeLoader.forEach((resumeLoad) => {
+      resumeLoad.classList.remove("resume-section_load");
+      resumeLoad.classList.add("resume-section_loaded");
+    });
+  } else if (!resumeLoaded) {
+    resumeLoader.forEach((resumeLoad) => {
+      resumeLoad.classList.add("resume-section_load");
+      resumeLoad.classList.remove("resume-section_loaded");
+    });
+  }
 }
+setIsLoad();
+
 sessionStorage.setItem("resume-loaded", resumeLoaded);
 
 function stopResumeLoader() {
   setTimeout(() => {
     resumeLoaded = true;
     sessionStorage.setItem("resume-loaded", resumeLoaded);
+    setIsLoad();
   }, 3000);
 }

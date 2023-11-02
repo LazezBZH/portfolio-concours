@@ -235,6 +235,7 @@ nav a:hover {
   animation: animate 5s linear infinite;
   -webkit-animation: animate 5s linear infinite;
 }
+
 .backSide-content {
   height: auto;
   height: 90%;
@@ -308,29 +309,38 @@ nav a:hover {
   padding: 0.5rem;
   border-radius: 5px;
   box-shadow: 5px 5px 5px var(--neonblue-xlight);
+  filter: grayscale(0%) sepia(0%);
+  animation: animateImg 12s infinite;
+  -webkit-animation: animateImg 12s infinite;
 }
-.hover {
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  transform: rotate(-45deg);
-  animation: clign 3s 3 ease-in-out forwards;
-  -webkit-animation: clign 3s 3 ease-in-out forwards;
+@keyframes animateImg {
+  0%,
+  20%,
+  56%,
+  100% {
+    filter: grayscale(0%) sepia(0%);
+    background-color: var(--neonblue);
+  }
+
+  31%,
+  38% {
+    filter: grayscale(20%) sepia(100%);
+    background-color: var(--primary);
+  }
 }
-@keyframes clign {
-  from {
-    opacity: 1;
+@-webkit-keyframes animateImg {
+  0%,
+  20%,
+  56%,
+  100% {
+    filter: grayscale(0%) sepia(0%);
+    background-color: var(--neonblue);
   }
-  to {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes clign {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
+
+  31%,
+  38% {
+    filter: grayscale(20%) sepia(100%);
+    background-color: var(--primary);
   }
 }
 
@@ -361,24 +371,17 @@ nav a:hover {
   font-weight: bold;
   background-color: transparent;
   border: none;
-  width: 25%;
-  height: 25%;
-  /* text-align: right; */
-  padding: 30px 5px 0 30px;
-  padding-top: 10px;
-  padding-left: 10px;
   color: var(--neonpink);
-  display: flex;
-  justify-content: end;
 }
 .showBack {
-  bottom: 0px;
+  bottom: -15px;
   align-items: end;
+  padding: 15px 5px 15px 20px;
 }
 .showFront {
-  top: 0px;
+  top: -10px;
+  padding: 15px 5px 15px 20px;
   align-items: start;
-  line-height: 0;
 }
 .showBack:hover,
 .showFront:hover {

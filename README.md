@@ -66,6 +66,7 @@ Certaines de ses oeuvres sont détestées voire craintes même par ses adorateur
 
 - Tri des oeuvres selon des tags
 - Tri également possible sur la page CV ainsi que depuis une page contenant une sélection
+- CV visualisable ou téléchargeable
 - Une carte par oeuvre, se retourne
 - Souris personnalisées
 - Gestion des erreurs

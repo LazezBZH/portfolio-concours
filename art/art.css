@@ -94,6 +94,7 @@
 }
 .card-art_2 {
   height: 200px;
+  margin-bottom: 5px;
 }
 .card-art_2container {
   height: 250px;
@@ -150,10 +151,6 @@ h2 {
 }
 .show-all {
   width: 100px;
-  /* position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%); */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

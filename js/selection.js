@@ -50,22 +50,21 @@ fetch("/data/myArt.json")
       window.location.href =
         "/art/selection.html?tag=" + e.target.value + "&name=" + e.target.name;
     }
+    const showBack = document.querySelectorAll(".showBack");
+    const showFront = document.querySelectorAll(".showFront");
+    const innerCards = document.querySelectorAll(".innerCard");
+
+    showBack.forEach((elt) => elt.addEventListener("click", showTheBack));
+    showFront.forEach((elt) => elt.addEventListener("click", showTheFront));
+
+    // retourner la carte
+    function showTheBack(e) {
+      innerCards.forEach(
+        (innerCard) => (innerCard.style.transform = "rotateY(0deg)")
+      );
+      e.target.parentNode.parentNode.style.transform = "rotateY(180deg)";
+    }
+    function showTheFront(e) {
+      e.target.parentNode.parentNode.style.transform = "rotateY(0deg)";
+    }
   });
-
-const showBack = document.querySelectorAll(".showBack");
-const showFront = document.querySelectorAll(".showFront");
-const innerCards = document.querySelectorAll(".innerCard");
-
-showBack.forEach((elt) => elt.addEventListener("click", showTheBack));
-showFront.forEach((elt) => elt.addEventListener("click", showTheFront));
-
-// retourner la carte
-function showTheBack(e) {
-  innerCards.forEach(
-    (innerCard) => (innerCard.style.transform = "rotateY(0deg)")
-  );
-  e.target.parentNode.parentNode.style.transform = "rotateY(180deg)";
-}
-function showTheFront(e) {
-  e.target.parentNode.parentNode.style.transform = "rotateY(0deg)";
-}

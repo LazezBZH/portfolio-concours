@@ -1,3 +1,4 @@
+/* aniation titre */
 .resume-title::before {
   top: 0%;
   left: 70%;
@@ -89,6 +90,7 @@
   bottom: 35%;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 2px;
 }
 .resume-main h2 {
   color: var(--neongreen);
@@ -111,16 +113,26 @@
   justify-content: center;
   position: relative;
   padding-left: 30px;
+  padding-right: 5px;
   align-items: start;
-  width: 300px;
-  height: 300px;
+  width: 296px;
+  height: 296px;
   background-color: var(--primary);
+}
+.resume-section:nth-child(odd) {
+  border: solid 2px var(--neongreen-light);
+}
+.resume-section:nth-child(even) {
+  border: solid 1px var(--neonblue-light);
 }
 .resume-section_load {
   opacity: 0;
 }
 .resume-section_load:nth-child(1) {
-  animation: appear 3s ease-in-out 1s 1 normal forwards;
+  animation: appear 3s ease-in-out 1s 1 normal forwards,
+    rotate 3s ease-in-out 6500ms 1 normal forwards,
+    disapear 2s ease-in-out 9500ms 1 normal forwards,
+    return 2s ease-in-out 13500ms 1 normal forwards;
 }
 .resume-section_load:nth-child(2) {
   animation: appear 3s ease-in-out 2s 1 normal forwards;
@@ -138,6 +150,7 @@
   animation: appear 3s ease-in-out 6s 1 normal forwards;
 }
 
+/* apparition cv */
 @-webkit-keyframes appear {
   0% {
     opacity: 0;
@@ -220,6 +233,90 @@
 }
 /* fin bg image */
 
+.resume-section_loaded:nth-child(1) {
+  animation: rotate 3s ease-in-out 3s 1 normal forwards,
+    disapear 2s ease-in-out 6s 1 normal forwards,
+    return 3s ease-in-out 8s 2 normal forwards;
+  transform-origin: 0% 100%;
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+}
+/* rotation de la 1ère section */
+@keyframes rotate {
+  0% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+
+  79% {
+    transform: rotate(-90deg) scale(0.7);
+  }
+  100% {
+    transform: rotate(-140deg) scale(0.6);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+
+  79% {
+    transform: rotate(-90deg) scale(0.7);
+  }
+  100% {
+    transform: rotate(-140deg) scale(0.6);
+  }
+}
+@keyframes disapear {
+  from {
+    opacity: 1;
+    transform: rotate(-140deg) scale(0.6);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.3);
+  }
+}
+@-webkit-keyframes disapear {
+  from {
+    opacity: 1;
+    transform: rotate(-140deg) scale(0.6);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.3);
+  }
+}
+@keyframes return {
+  0% {
+    transform: rotate(-180deg) scale(0.1);
+    opacity: 0;
+  }
+  20% {
+    transform: rotate(-230deg) scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-360deg) scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes return {
+  0% {
+    transform: rotate(-180deg) scale(0.1);
+    opacity: 0;
+  }
+  20% {
+    transform: rotate(-230deg) scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-360deg) scale(1);
+    opacity: 1;
+  }
+}
+
 .resume-section_1 img,
 .resume-section_6 img {
   width: 80%;
@@ -236,6 +333,7 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
+  width: 90%;
 }
 .bold {
   font-weight: bold;
@@ -250,7 +348,6 @@
   gap: 0px 30px;
   justify-content: space-between;
 }
-
 .resume-section a {
   font-weight: bold;
   font-size: 1.2rem;
