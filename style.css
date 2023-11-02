@@ -43,21 +43,21 @@
     background-color: var(--primary);
     background-size: 100%;
     background-position: top;
-    z-index: 2;
+    z-index: 3;
     background-image: url(/assets/svg/pas.svg);
   }
   2% {
     background-color: var(--text);
     background-size: 100%;
     background-position: top;
-    z-index: 2;
+    z-index: 3;
     background-image: url(/assets/svg/pas.svg);
   }
   99% {
     background-color: var(--text);
     background-size: 800%;
     background-position: bottom right;
-    z-index: 2;
+    z-index: 3;
     background-image: url(/assets/svg/pas.svg);
   }
   100% {
